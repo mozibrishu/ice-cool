@@ -20,6 +20,7 @@ body{
     --background-bg: url('https://ms.purplepatch.online/2024/full-takeover/walton/ac/v2/assets/desktopBg2.jpg');
     --cross-btn-top: 3dvh;
     --cross-btn-right: 30dvh;
+    --bottle-width: 10dvw;
   }
 }
 
@@ -32,6 +33,13 @@ body{
   background-size: 100% 100%;
 }
 
+.ppm_bottle {
+  position: absolute;
+  top: 5dvh;
+  right: 0px;
+  width: var(--bottle-width);
+  display: none;
+}
 .ppm_ac {
   position: absolute;
   top: 5dvh;

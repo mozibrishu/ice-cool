@@ -1,15 +1,14 @@
-// submitInteraction('slide',extraData)
-// end interaction
+
 
 let remoteClicked = false;
 function beginning() {
-  gsap.fromTo('.ppm_ac_close', { y: '-30dvh' }, { y: 0, opacity: 1, display: 'block' })
-  gsap.fromTo('.ppm_remote', { y: '30dvh' }, { y: 0, opacity: 1, display: 'block' })
-  gsap.fromTo('.ppm_tap_hand', { display:'none' }, {delay:.3, y: 0, opacity: 1, display: 'block',onComplete:()=>{gsap.to('.ppm_tap_hand',{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:true})} })
+  gsap.fromTo('.ppm_bottle', { x: '150%' }, { x: 0, opacity: 1, display: 'block',rotateZ:-50 })
+  // gsap.fromTo('.ppm_remote', { y: '30dvh' }, { y: 0, opacity: 1, display: 'block' })
+  // gsap.fromTo('.ppm_tap_hand', { display:'none' }, {delay:.3, y: 0, opacity: 1, display: 'block',onComplete:()=>{gsap.to('.ppm_tap_hand',{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:true})} })
 };
 
 setTimeout(() => {
-  // beginning()
+  beginning()
 }, 1000);
 
 function remoteClick(){
@@ -39,3 +38,4 @@ document.querySelector('.ppm_closeBtn_takeover').addEventListener('click',(e)=>{
   e.stopPropagation();
   document.querySelector('.ppm_container').remove();
 })
+
