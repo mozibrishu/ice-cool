@@ -1,0 +1,227 @@
+#gif-container {
+  position: relative;
+  visibility: hidden;
+  z-index: 9999999;
+  opacity: 0;
+  /* transition: transform 1s, opacity 1s; */
+}
+
+
+#gif-container.loaded {
+  z-index: 9999999;
+  visibility: visible;
+  opacity: 1;
+
+}
+
+#gif-container.loaded img {
+  top: 0;
+  z-index: 9999999;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slide out animation */
+.slide-out img {
+  -webkit-animation: slide 1s forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: slide 1s forwards;
+
+
+}
+
+@-webkit-keyframes slide {
+  100% {
+      left: -500%;
+      /* opacity: 0; */
+  }
+}
+
+@keyframes slide {
+  100% {
+      left: -500%;
+      /* opacity: 0; */
+  }
+}
+
+#bottom-div {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  height: 170px;
+  z-index: 99999999;
+  /* visibility: hidden; */
+  transform-origin: bottom left;
+/*  background: url(https://content-staging.adfinix.com/banglalink-takeover/assets/bottom.gif) 100% 100% no-repeat;*/
+  background-size: 100vw;
+  /* transform: rotate(90deg); */
+  opacity: 1;
+  transition: opacity 1s,transform 1s,-webkit-transform 1s;
+  animation: slideInFromBottom 1s forwards;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+      transform: rotate(90deg);
+      opacity: 1;
+  }
+
+  100% {
+      transform: rotate(0deg);
+      opacity: 1;
+  }
+}
+
+#bottom-div img {
+  width: 100%;
+}
+
+.adf-video {
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 100%;
+  bottom: -96px;
+  right: 0;
+  margin: auto 0;
+  max-width: 165px;
+  height: 130px;
+  transform: translateY(-19px);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+#adf-container {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #131d25
+}
+
+.slide {
+  overflow: hidden
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.slide .right_woman {
+  left: 46px
+}
+
+.slide .left_man {
+  left: auto;
+  right: 25px
+}
+
+.navigation {
+  display: none
+}
+
+.controls {
+  top: 27% !important;
+  opacity: 0
+}
+
+#link3 {
+  background-color: #fff
+}
+
+#invis {
+  width: 300px;
+  height: 200px;
+  background-color: brown;
+  position: absolute;
+  top: 0;
+  opacity: 0
+}
+
+#hand img {
+  width: 31px !important;
+  height: 30px !important
+}
+
+#video {}
+
+.video-controls {
+  top: 50px;
+  right: 128px;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.sound {
+  float: right;
+  background: 0 0;
+  color: #fff;
+  border: none
+}
+
+.toggle {
+  background: 0 0;
+  color: #fff;
+  border: none
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2')
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased
+}
+
+.overlay_img {
+  width: 81px;
+  height: 30px;
+  position: absolute;
+  left: 15px;
+  top: 6px;
+}
+.close-btn{
+bottom: 0;
+  margin-bottom: 42%;
+  position: fixed;
+  right: 1vw;
+  width: 28px;
+  height: 28px;
+  background: url(https://ms.purplepatch.online/2024/full-takeover/walton/ac/ddf/demo/CloseButtonIcon.svg) 100% 100% no-repeat;
+  background-size: 28px 28px;
+  cursor: pointer;
+  z-index: 99999999999;
+}
